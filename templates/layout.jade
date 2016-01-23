@@ -1,0 +1,50 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title(Nodebots Seattle)
+    meta(name="description" content="Nodebots Seattle is a meetup for hardware and JavaScript enthusiasts and hackers of all skill levels.")
+    link(href="http://d2v52k3cl9vedd.cloudfront.net/basscss/7.0.4/basscss.min.css" rel="stylesheet")
+    link(rel="shortcut icon" href="/img/favicon.png")
+    style
+      | .bg-yellow {
+      |  background-color: #F8E01E;
+      | }
+      | .yellow {
+      |  color: #F8E01E;
+      | }
+      | .xl {
+      |  font-size: 4rem;
+      | }
+      | #bot-container {
+      |  top: -40px;
+      | }
+      | .inkwell {
+      |  /*-webkit-filter: sepia(.3) contrast(1.1) brightness(1.1) grayscale(1);*/
+      |  /*filter: sepia(.3) contrast(1.1) brightness(1.1) grayscale(1);*/
+      | }
+  body
+    header(class="center bg-yellow py4 inkwell" style="background-image: url(/img/header-image.jpg); background-size: cover; background-position: center 43%;")
+      h1(class="m0 xl px2 inline-block" style="background: rgba(255, 255, 255, 0.5);") Nodebots Seattle
+    section(id="bot-container" class="relative center")
+      include logo.svg
+    section(class="col-10 sm-col-8 md-col-6 lg-col-5 mx-auto h3 mb3")
+      block content
+    section(class="clearfix overflow-hidden")
+      div(class="right mr3 relative")
+      a(href="http://johnny-five.io" class="block" target="_blank" style="height: 300px")
+        include j5.svg
+    footer(class="bg-black white py2 px3")
+      p(class="m0")
+        | Nodebots Seattle expects all speakers and attendees to follow the
+        a(class="yellow" href="http://jsconf.com/codeofconduct.html" target="_blank") JSConf code of conduct
+        | .
+      p(class="m0")
+        | Site design forked with 💖 from
+        a(class="yellow" href="http://nodebots.nyc/") http://nodebots.nyc/
+        | . Header photograph by
+        a(class="yellow" href="https://www.flickr.com/photos/anotherangle/8426879052/in/photolist-dQDXy9-8UJz5J-8LXwgK-qQ6P9y-puD1bn-dsWWLt") Michael Muraz
+        | .
+    script(type="text/javascript" src="/js/main.js")
