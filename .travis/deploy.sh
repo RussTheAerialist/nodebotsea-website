@@ -9,7 +9,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 fi
 
 case "$TRAVIS_BRANCH" in
-  development)
+  master)
     ;;
   travis)
     ;;
@@ -27,8 +27,4 @@ git config user.email "me@russellhay.com"
 git add .
 git commit -m "auto-commit via travis"
 
-if [ -z "$PUSH_DEBUG" ]; then
 git push --force --quiet "https://${GH_DEPLOYER}:${GH_TOKEN}@${GH_REPO}" master:gh-pages > /dev/null 2>&1
-else
-git push --force --quiet "https://${GH_DEPLOYER}:${GH_TOKEN}@${GH_REPO}" master:gh-pages
-fi
