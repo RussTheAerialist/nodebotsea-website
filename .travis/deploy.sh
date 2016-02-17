@@ -9,7 +9,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 fi
 
 case "$TRAVIS_BRANCH" in
-  master)
+  development)
     ;;
   travis)
     ;;
