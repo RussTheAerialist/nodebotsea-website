@@ -28,7 +28,7 @@ git add .
 git commit -m "auto-commit via travis"
 
 if [ -z "$PUSH_DEBUG" ]; then
-git push --force --quiet "https://${GH_DEPLOYER}:${GH_TOKEN}@${GH_REPO}" development:gh-pages > /dev/null 2>&1
+git push --force --quiet "https://${GH_DEPLOYER}:${GH_TOKEN}@${GH_REPO}" master:gh-pages > /dev/null 2>&1
 else
-git push --force --quiet "https://${GH_DEPLOYER}:${GH_TOKEN}@${GH_REPO}" development:gh-pages
+git push --force --quiet "https://${GH_DEPLOYER}:${GH_TOKEN}@${GH_REPO}" master:gh-pages
 fi
