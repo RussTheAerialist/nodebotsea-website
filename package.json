@@ -5,5 +5,8 @@
     "underscore": "1.4.x",
     "wintersmith": "^2.2.5"
   },
-  "private": "true"
+  "private": "true",
+  "scripts": {
+    "test": "./node_modules/.bin/wintersmith build"
+  }
 }
